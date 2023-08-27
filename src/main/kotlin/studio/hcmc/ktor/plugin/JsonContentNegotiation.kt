@@ -22,7 +22,6 @@ val JsonContentNegotiation = createApplicationPlugin("JsonContentNegotiation", :
     }
 
     application.attributes.put(defaultJsonKey, json)
-
     application.install(ContentNegotiation) {
         json(json)
         this@createApplicationPlugin.pluginConfig.contentNegotiationConfiguration(this)
